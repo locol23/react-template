@@ -6,19 +6,20 @@
   "author": "Yoshitaka Terazawa <locol6622@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "npm run format && npm run lint && parcel src/index.html",
-    "format": "prettier-eslint --write '**/*.js'",
-    "lint": "eslint src",
+    "build": "run-s lint && run-p parcel lint-watch",
+    "parcel": "parcel src/index.html",
+    "lint": "eslint --fix src",
+    "lint-watch": "onchange 'src/**/*.js' -- npm run lint",
     "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
-      "prettier-eslint --write",
-      "eslint",
+      "eslint --fix",
       "git add"
     ]
   },
   "dependencies": {
+    "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "recompose": "^0.26.0",
@@ -26,16 +27,18 @@
   },
   "devDependencies": {
     "babel-preset-react": "^6.24.1",
-    "eslint": "^4.15.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.5.1",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.1",
+    "onchange": "^3.3.0",
     "parcel-bundler": "^1.4.1",
     "prettier": "^1.10.2",
-    "prettier-eslint": "^8.8.0",
     "prettier-eslint-cli": "^4.7.0"
   }
 }
