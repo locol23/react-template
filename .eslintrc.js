@@ -7,10 +7,11 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: ['airbnb', 'eslint:recommended', 'plugin:react/recommended'],
   plugins: ['react'],
   rules: {
-    quotes: [ERROR, 'single']
+    quotes: [ERROR, 'single'],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }]
   },
   parserOptions: {
     sourceType: 'module'
