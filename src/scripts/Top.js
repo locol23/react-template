@@ -1,4 +1,5 @@
 import React from 'react';
+import { pure } from 'recompose';
 
 const Top = () => {
   return (
@@ -8,4 +9,4 @@ const Top = () => {
   );
 };
 
-export default Top;
+export default pure(Top);
