@@ -2,10 +2,14 @@ import React from 'react'
 import { pure } from 'recompose'
 import styled from 'styled-components'
 
+const { StrictMode } = React
+
 const Top = () => {
   return (
     <Layout>
-      <h1>Hello React</h1>
+      <StrictMode>
+        <h1>Hello React</h1>
+      </StrictMode>
     </Layout>
   )
 }
