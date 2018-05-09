@@ -13,6 +13,7 @@ module.exports = {
     quotes: [ERROR, 'single'],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     "react/prop-types": "off",
+    "no-console": 1,
     "prettier/prettier": [
       "error",
       {
