@@ -1,5 +1,6 @@
 'use strict';
 
+const WARN = 1;
 const ERROR = 2;
 
 module.exports = {
@@ -11,9 +12,9 @@ module.exports = {
   plugins: ['react'],
   rules: {
     quotes: [ERROR, 'single'],
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [WARN, { extensions: ['.js', '.jsx'] }],
     "react/prop-types": "off",
-    "no-console": 1,
+    "no-console": WARN,
     "prettier/prettier": [
       "error",
       {
