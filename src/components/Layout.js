@@ -6,6 +6,9 @@ const Component = styled.div`
   justify-content: center;
 `
 
-const Enhance = compose(setDisplayName('Layout'), pure)
+const Enhance = compose(
+  setDisplayName('Layout'),
+  pure
+)
 
 export default Enhance(Component)

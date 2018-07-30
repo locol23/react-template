@@ -29,6 +29,10 @@ const withCheckShowState = branch(
   renderComponent(Show)
 )
 
-const Enhance = compose(setDisplayName('Contents'), withCheckShowState, pure)
+const Enhance = compose(
+  setDisplayName('Contents'),
+  withCheckShowState,
+  pure
+)
 
 export default Enhance(Component)

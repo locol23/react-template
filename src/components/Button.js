@@ -8,6 +8,9 @@ const Component = props => (
   </Layout>
 )
 
-const Enhance = compose(setDisplayName('Button'), pure)
+const Enhance = compose(
+  setDisplayName('Button'),
+  pure
+)
 
 export default Enhance(Component)
