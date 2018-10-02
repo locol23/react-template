@@ -6,33 +6,31 @@ import {
   renderComponent,
   pure,
 } from 'recompose'
-import Layout from './Layout'
-
-const Identity = c => c
-
-const Show = () => (
-  <Layout>
-    <h1>Show!!</h1>
-  </Layout>
-)
+import styled from 'styled-components'
 
 const Component = ({ text }) => (
   <Layout>
-    <h1>{text}</h1>
+    <div>{text}</div>
   </Layout>
 )
 
+const Layout = styled.div`
+  margin-bottom: 20px;
+  font-size: 20px;
+`
+
+const Identity = c => c
 const checkShowState = ({ show }) => !show
 const withCheckShowState = branch(
   checkShowState,
   Identity,
-  renderComponent(Show)
+  renderComponent(() => <Component text="Change Text!!" />)
 )
 
-const Enhance = compose(
-  setDisplayName('Contents'),
+const Enhancer = compose(
+  setDisplayName('Text'),
   withCheckShowState,
   pure
 )
 
-export default Enhance(Component)
+export const Text = Enhancer(Component)

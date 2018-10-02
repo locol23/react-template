@@ -15,6 +15,7 @@ module.exports = {
     'react/jsx-filename-extension': [WARN, { extensions: ['.js', '.jsx'] }],
     "react/prop-types": "off",
     "no-console": WARN,
+    "import/prefer-default-export": false,
     "prettier/prettier": [
       "error",
       {

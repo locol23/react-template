@@ -8,7 +8,7 @@
   "scripts": {
     "build": "run-s lint && run-p parcel lint-watch",
     "parcel": "parcel src/index.html",
-    "lint": "eslint --fix src",
+    "lint": "eslint src",
     "lint-watch": "chokidar src/*.js src/**/*.js -c 'npm run lint'",
     "precommit": "lint-staged"
   },

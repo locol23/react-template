@@ -1,11 +1,8 @@
 import React from 'react'
 import { compose, setDisplayName, pure } from 'recompose'
-import Layout from './Layout'
 
 const Component = props => (
-  <Layout>
-    <button onClick={props.setShow}>Change show state</button>
-  </Layout>
+  <button onClick={props.setShow}>Change show state</button>
 )
 
 const Enhance = compose(
@@ -13,4 +10,4 @@ const Enhance = compose(
   pure
 )
 
-export default Enhance(Component)
+export const Button = Enhance(Component)

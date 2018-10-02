@@ -6,15 +6,9 @@ import {
   lifecycle,
   pure,
 } from 'recompose'
-import Contents from './Contents'
-import Button from './Button'
+import { Main } from './organisms/Main'
 
-const Component = props => (
-  <React.Fragment>
-    <Contents {...props} />
-    <Button {...props} />
-  </React.Fragment>
-)
+const Component = props => <Main {...props} />
 
 const Enhance = compose(
   setDisplayName('App'),
@@ -36,4 +30,4 @@ const Enhance = compose(
   pure
 )
 
-export default Enhance(Component)
+export const App = Enhance(Component)
