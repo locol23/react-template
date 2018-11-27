@@ -6,10 +6,12 @@
   "author": "Yoshitaka Terazawa <locol6622@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "run-s lint && run-p parcel lint-watch",
+    "clean": "rimraf dist",
     "parcel": "parcel src/index.html",
     "lint": "eslint src",
     "lint-watch": "chokidar src/*.js src/**/*.js -c 'npm run lint'",
+    "dev": "run-s clean lint && run-p parcel lint-watch",
+    "build": "run-s clean lint && parcel build src/index.html",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -40,6 +42,7 @@
     "npm-run-all": "^4.1.2",
     "parcel-bundler": "^1.4.1",
     "prettier": "^1.10.2",
-    "prettier-eslint-cli": "^4.7.0"
+    "prettier-eslint-cli": "^4.7.0",
+    "rimraf": "^2.6.2"
   }
 }
