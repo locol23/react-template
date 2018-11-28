@@ -37,13 +37,19 @@ npm i
 ### Develop
 
 ```bash
-yarn build
+yarn dev
 
 #if you use npm
-npm run build
+npm run dev
 ```
 
 Go to [http://localhost:1234](http://localhost:1234)
+
+### Production Deploy
+
+```
+yarn build && yarn deploy
+```
 
 ## LICENSE
 
