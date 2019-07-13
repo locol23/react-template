@@ -31,7 +31,7 @@
     "@babel/core": "7.1.6",
     "@babel/preset-react": "7.0.0",
     "chokidar-cli": "1.2.1",
-    "eslint": "5.9.0",
+    "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "2.10.0",
     "eslint-plugin-import": "2.14.0",
